@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "jsx": "react", // Enable JSX support
+    "allowJs": true, // Allow JavaScript files
+    "checkJs": true, // Enable type checking for JavaScript
+    "esModuleInterop": true // Allow default imports from CommonJS modules
+  },
+  "include": ["src/**/*"], // Include all files in the "src" folder
+  "exclude": ["node_modules"] // Exclude node_modules
+}
