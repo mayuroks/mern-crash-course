@@ -37,6 +37,7 @@ const HomePage = () => {
             lg: 3
           }}
           spaceX={10}
+          spaceY={10}
           w={"full"}
         >
           {products.map((product) => (

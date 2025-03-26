@@ -46,7 +46,22 @@ export const ProductCard = ({ product }) => {
       _hover={{ transform: "translateY(-5px)", shadow: 'xl' }}
 
     >
-      <Image src={product.image} />
+      {/* <Image
+        objectFit="revert"
+        src={product.image} /> */}
+
+      <Box
+        width="100%" // Adjust to your desired fixed width
+        height="200px" // Adjust to your desired fixed height
+        overflow="hidden" // Clip anything that overflows
+      >
+        <Image
+          src={product.image}
+          objectFit="cover" // Scale and crop the image to fill the box
+          width="100%"
+          height="100%"
+        />
+      </Box>
 
       <Box p="4" spaceY="2">
         <Text fontWeight="bold" color="fg">
@@ -105,7 +120,7 @@ export const ProductCard = ({ product }) => {
                     onChange={(e) => setNewProduct({ ...newProduct, image: e.target.value })}
                   >
                   </Input>
-                 
+
                 </VStack>
               </Dialog.Body>
 
